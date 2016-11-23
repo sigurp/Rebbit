@@ -1,7 +1,6 @@
 extends layout
 
 block content
-  h1= title
   main(class='container')
     h1 Spjallborð hinna háfleygu hugmynda.
     section(class='entries')
@@ -17,3 +16,11 @@ block content
                 div(class='panel-heading')
                   h3(class='panel-title') Frú Rutrum
                 div(class='panel-body') Svar frá frú Rutrum
+    h2 Ný færsla
+    form(id='new-entry')
+      label(for='new-entry-name') Nafn
+      input(type='text', class='form-control', id='new-entry-name', name='name', autocomplete='off')
+      label(for='new-entry-text') Texti
+      textarea(autocomplete='off', rows='5', id='new-entry-text', name='text', class='form-control')
+      button(class='btn btn-primary')
+        i(class='glyphicon glyphicon-pencil') Skrifa
