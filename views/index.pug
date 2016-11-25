@@ -3,6 +3,6 @@ extends layout
 block content
   h1= title
   each thread in data
-    a(href='/thread/'+thread.id) #{thread.title}
+    a(href='/threads/'+thread.id) #{thread.title}
     p= thread.poster
     p= thread.date
