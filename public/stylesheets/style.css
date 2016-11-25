@@ -23,9 +23,11 @@ a {
 
 #header-image {
 	background-image: url(images/frogwavinghand.jpg);
-	width: 100%
+	width: 28%;
+	height: 300px;
 }
 
 #headerbox {
 	display: flex;
+	justify-content: space-around;
 }
