@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
     })
 });
 
-router.get('/threads', (req, res, next) => {
+router.get('/threads/:threadID', (req, res, next) => {
   console.log('Hú!');
   res.render('thread', { title: 'req.params.threadID' });
   // db.any('select * from comments where thread = threadID')
