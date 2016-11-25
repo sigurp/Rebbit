@@ -6,3 +6,26 @@ body {
 a {
   color: #00B7FF;
 }
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+#footer {
+	background-color: lightgray;
+}
+
+#header-image {
+	background-image: url(images/frogwavinghand.jpg);
+	width: 100%
+}
+
+#headerbox {
+	display: flex;
+}

@@ -4,5 +4,13 @@ html
     meta(charset='utf-8')
     title= title
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous')
-  body
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body(class='Site')
+    header(class='jumbotron', id='headerbox')
+      h1 Rebbit
+      div(id='header-image')
+
     block content
+    footer(class='jumbotron', id='footer')
+      p footer text
+      p lokaverkefni í vefforritun 2016

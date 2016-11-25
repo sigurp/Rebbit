@@ -4,6 +4,7 @@ const pgp = require('pg-promise')();
 
 const db = pgp('postgres://postgres:postgres@localhost/rebbit');
 
+<<<<<<< HEAD
 // threads.get('/threads/:threadID', (req, res, next) => {
 //   console.log('Hú!');
 //   let text, poster;
@@ -29,3 +30,20 @@ const db = pgp('postgres://postgres:postgres@localhost/rebbit');
 // });
 
 module.exports = threads;
+=======
+router.get('/threads/:threadID', (req, res, next) => {
+  res.render('index', { title: 'req.params.threadID' });
+  // db.any('select * from comments where thread = threadID')
+  //   .then((data) => {
+  //     console.log('data', data);
+  //     res.render('thread', { title: 'Rebbit þræðir', data });
+  //   })
+  //   .catch((error) => {
+  //     console.log('error', error);
+  //     res.render('error', { title: 'Error', 
+  //       message: 'Eitthvað fór úrskeiðis!', error });
+  //   })
+});
+
+module.exports = router;
+>>>>>>> c5a41c2ec91ae2796e26bb1ae5b81175c404ce71
