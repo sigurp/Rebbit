@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  each thread in data
-    a(href='/threads/'+thread.id) #{thread.title}
-    p= thread.poster
-    p= thread.date
+  main(class='site-content')
+    h1= title
+    each thread in data
+      a(href='/threads/'+thread.id) #{thread.title}
+      p= thread.poster
+      p= thread.date

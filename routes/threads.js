@@ -5,8 +5,7 @@ const pgp = require('pg-promise')();
 const db = pgp('postgres://postgres:postgres@localhost/rebbit');
 
 router.get('/threads/:threadID', (req, res, next) => {
-  console.log('Hú!');
-  res.render('thread', { title: 'req.params.threadID' });
+  res.render('index', { title: 'req.params.threadID' });
   // db.any('select * from comments where thread = threadID')
   //   .then((data) => {
   //     console.log('data', data);
