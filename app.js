@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 
 const routes = require('./routes/routes');
 const users = require('./routes/users');
-const threads = require('./routes/threads');
 
 const app = express();
 
