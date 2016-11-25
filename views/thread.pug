@@ -1,4 +1,10 @@
 extends layout
 
 block content
-  h1= title
+  p= poster
+  p= text
+
+  ul
+    for comment in comments
+      li= comment.name
+        p= comment.comment

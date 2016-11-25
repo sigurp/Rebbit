@@ -19,18 +19,23 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/threads/:threadID', (req, res, next) => {
-  console.log('Hú!');
-  res.render('thread', { title: 'req.params.threadID' });
-  // db.any('select * from comments where thread = threadID')
-  //   .then((data) => {
-  //     console.log('data', data);
-  //     res.render('thread', { title: 'Rebbit þræðir', data });
-  //   })
-  //   .catch((error) => {
-  //     console.log('error', error);
-  //     res.render('error', { title: 'Error', 
-  //       message: 'Eitthvað fór úrskeiðis!', error });
-  //   })
+  let text, poster;
+  db.one(`select * from threads where id = ${req.params.threadID}`)
+    .then((thread) => {
+      text = thread.text;
+      poster = thread.poster;
+      console.log('thread', thread);
+      db.any(`select * from comments where thread = ${req.params.threadID}`)
+        .then((comments) => {
+          console.log('data', comments);
+          res.render('thread', { poster, text, comments });
+        })
+    })
+    .catch((error) => {
+      console.log('error', error);
+      res.render('error', { title: 'Error', 
+        message: 'Eitthvað fór úrskeiðis!', error });
+    })
 });
 
 module.exports = router;
