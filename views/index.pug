@@ -3,7 +3,24 @@ extends layout
 block content
   main(class='site-content')
     h1= title
+    div(class='panel panel-default', id='thradasmidur')
+      div(class='panel-heading')
+        h3(class='panel-title') Nýr Þráður
+      div(class='panel-body', id='thradasmidur1')
+        div(id='nameinput')
+          label(for='new-entry-name') Nafn
+          input(type='text', class='form-control', id='new-entry-name', name='name', autocomplete='off')
+        div(id='textinput')
+          label(for='new-entry-text') Lýsing
+          textarea(autocomplete='off', rows='1', id='new-entry-text', name='text',   class='form-control')
+        div(id='buttonarea')  
+          button(class='btn btn-primary')
+            i(class='glyphicon glyphicon-pencil') Nýr þráður
+
     each thread in data
-      a(href='/threads/'+thread.id) #{thread.title}
-      p= thread.poster
-      p= thread.date
+      div(class='panel panel-success')
+        div(class='panel-heading')
+          a(href='/threads/'+thread.id) #{thread.title}
+        div(class='panel-body')
+          p= thread.poster
+          p= thread.date
