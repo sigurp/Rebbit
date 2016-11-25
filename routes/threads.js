@@ -1,10 +1,11 @@
 const express = require('express');
-const router = express.Router();
+const brouter = express.Router();
 const pgp = require('pg-promise')();
 
 const db = pgp('postgres://postgres:postgres@localhost/rebbit');
 
-router.get('/threads', (req, res, next) => {
+brouter.get('/threads', (req, res, next) => {
+  console.log('Hú!');
   res.render('thread', { title: 'req.params.threadID' });
   // db.any('select * from comments where thread = threadID')
   //   .then((data) => {
@@ -18,4 +19,4 @@ router.get('/threads', (req, res, next) => {
   //   })
 });
 
-module.exports = router;
+module.exports = brouter;
