@@ -1,7 +1,0 @@
-{
-	"name": "sip12",
-	"description": "Verekfni 6 í vefforritun",
-	"env": {
-		"BASEURL": "https://apis.is"
-	}
-}
