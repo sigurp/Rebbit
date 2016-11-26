@@ -13,7 +13,7 @@ const db = pgp(DATABASE);
 router.get('/', (req, res, next) => {
   db.any('select * from threads')
     .then((data) => {
-      // console.log('data', data);
+      // console.log('get data', data);
       res.render('index', { title: 'Rebbit þræðir', data });
     })
     .catch((error) => {
@@ -24,14 +24,17 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res) => {
-  const name = xss(req.body.new_entry_name || '');
-  const text = xss(req.body.new_thread_text || '');
-  const title = xss(req.body.new_thread_title || '');
+  const name = xss(req.body.name || '');
+  const text = xss(req.body.text || '');
+  const title = xss(req.body.title || '');
 
-  db.any(`insert into threads (poster, title, text)
-    values ($1, $2, $3)`, [name, title, text])
-    .then((data) => {
-      res.render('index', { title: 'Rebbit þræðir', data });
+  db.none(`insert into threads (poster, title, text, replies, views)
+    values ($1, $2, $3, $4, $5)`, [name, title, text,0,0])
+    .then(() => {
+      db.any('select * from threads;')
+        .then((data) => {
+          res.render('index', { title: 'Rebbit þræðir', data });
+        });
     })
     .catch((error) => {
       res.render('error', { title: 'Error',
