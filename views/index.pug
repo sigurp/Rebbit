@@ -8,13 +8,13 @@ block content
         h3(class='panel-title') Nýr Þráður
       div(class='panel-body', id='thradasmidur1')
         div(id='nameinput')
-          label(for='new-entry-name') Nafn
-          input(type='text', class='form-control', id='new-entry-name', name='name', autocomplete='off')
+          label(for='new_entry_name') Nafn
+          input(type='text', class='form-control', id='new_entry_name', name='name', autocomplete='off')
         div(id='textinput')
-          label(for='new-entry-text') Lýsing
-          textarea(autocomplete='off', rows='1', id='new-entry-text', name='text',   class='form-control')
+          label(for='new_thread_text') Lýsing
+          textarea(autocomplete='off', rows='1', id='new_thread_text', name='text', class='form-control')
         div(id='buttonarea')  
-          button(class='btn btn-primary')
+          button(class='btn btn-primary', id='new_thread')
             i(class='glyphicon glyphicon-pencil') Nýr þráður
 
     each thread in data

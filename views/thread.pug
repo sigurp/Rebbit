@@ -12,11 +12,11 @@ block content
             h3(class='panel-title') Ný Athugasemd
           div(class='panel-body', id='thradasmidur1')
             div(id='nameinput')
-              label(for='new-entry-name') Nafn
-              input(type='text', class='form-control', id='new-entry-name', name='name', autocomplete='off')
+              label(for='new_comment_name') Nafn
+              input(type='text', class='form-control', id='new_comment_name', name='name', autocomplete='off')
             div(id='textinput')
-              label(for='new-entry-text') Athugasemd
-              textarea(autocomplete='off', rows='1', id='new-entry-text', name='text', class='form-control')  
+              label(for='new_comment_text') Athugasemd
+              textarea(autocomplete='off', rows='1', id='new_comment_text', name='text', class='form-control')  
             div(id='buttonarea')
               button(class='btn btn-primary')
                 i(class='glyphicon glyphicon-pencil') Skrá athugasemd
@@ -30,5 +30,5 @@ block content
               p= comment.comment
 
     div(id='backarea')
-      button(class='btn btn-primary')
+      a(href='/', class='btn btn-primary', id='back_button')
         i til baka
