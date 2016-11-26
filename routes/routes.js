@@ -1,10 +1,13 @@
 
 const express = require('express');
 const pgp = require('pg-promise')();
+const xss = require('xss');
 
 const router = express.Router();
 
-const db = pgp('postgres://postgres:postgres@localhost/rebbit');
+const DATABASE = process.env.DATABASE_URL || 
+  'postgres://postgres:postgres@localhost/rebbit';
+const db = pgp(DATABASE);
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
@@ -20,14 +23,19 @@ router.get('/', (req, res, next) => {
     })
 });
 
+router.post('/', (req, res) => {
+  const name = xss(req.body.new_entry_name);
+});
+
 router.get('/threads/:threadID', (req, res, next) => {
   let text, poster;
-  db.one(`select * from threads where id = ${req.params.threadID}`)
+  db.one(`select * from threads where id = $1`, [req.params.threadID])
     .then((thread) => {
       text = thread.text;
       poster = thread.poster;
       console.log('thread', thread);
-      db.any(`select * from comments where thread = ${req.params.threadID}`)
+      db.any(`select * from comments where thread = $1`,
+        [req.params.threadID])
         .then((comments) => {
           console.log('data', comments);
           res.render('thread', { poster, text, comments });
