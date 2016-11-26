@@ -8,15 +8,16 @@ block content
         h3(class='panel-title', id='new_thread_title') Nýr Þráður
       div(class='panel-body', id='threadmaker1')
         form(id='threadmakerinput', method='post', action='/')
-          div(id='nameinput')
-            label(for='new_entry_name') Nafn
-            input(type='text', class='form-control',   id='new_entry_name', name='name', autocomplete='off')
-          div(id='titleinput')
-            label(for='new_thread_title') Titill
-            textarea(autocomplete='off', rows='1',   id='new_thread_title', name='text', class='form-control')
+          div(id='name_and_title')
+            div(id='nameinput')
+              label(for='new_entry_name') Nafn
+              input(type='text', class='form-control', id='new_entry_name', name='name', autocomplete='off')
+            div(id='titleinput')
+              label(for='new_thread_title') Titill
+              input(type='text', class='form-control', id='new_thread_title', name='title', autocomplete='off')
           div(id='textinput')
             label(for='new_thread_text') Texti
-            textarea(autocomplete='off', rows='3',   id='new_thread_text', name='text', class='form-control')
+            textarea(autocomplete='off', rows='3', id='new_thread_text', name='text', class='form-control')
           div(id='buttonarea')
             button(class='btn btn-primary',   id='new_thread_button')
               i(class='glyphicon glyphicon-pencil') Nýr þráður

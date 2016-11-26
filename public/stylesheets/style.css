@@ -16,6 +16,10 @@ button {
 	height: 60%;
 }
 
+i {
+	font-size: 18px;
+}
+
 #new_thread_title{
 	font-size: 28px;
 }
@@ -24,9 +28,37 @@ button {
 	font-size: 28px;
 }
 
+.panel-heading h3 {
+	font-size: 28px;
+}
+
+.panel-body {
+	font-size: 20px;
+}
+
+#name_and_title {
+	display: flex;
+}
+
+#new_entry_name {
+    font-size: 18px;
+}
+
+#new_thread_title {
+	font-size: 18px;
+}
+
+#new_thread_text {
+	font-size: 18px;
+}
+
 #buttonarea {
 	display: flex;
 	align-items: flex-end;
+}
+
+#buttonarea i {
+	font-size: 16px;
 }
 
 #new_thread_button i {
@@ -95,4 +127,12 @@ button {
 #textinput {
 	width: 20%;
 	padding-bottom: 1%;
+}
+
+#new_comment_name {
+	font-size: 18px;
+}
+
+#new_comment_text {
+	font-size: 18px;
 }
