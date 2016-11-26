@@ -5,7 +5,7 @@ body {
 
 a {
   color: #00B7FF;
-  font: 20px;
+  font-size: 28px;
 }
 
 header {
@@ -42,10 +42,6 @@ i {
 
 #new_entry_name {
     font-size: 18px;
-}
-
-#new_thread_title {
-	font-size: 18px;
 }
 
 #new_thread_text {
@@ -135,4 +131,32 @@ i {
 
 #new_comment_text {
 	font-size: 18px;
+}
+
+/* mobile dót*/ 
+
+@media only screen and (max-width: 960px) {
+  /* layout page */
+  #headerbox {
+      justify-content: center;
+  }
+
+  /* index page */
+  #name_and_title {
+       display: flex;
+       flex-direction: column;
+  }
+  
+  #name_and_title * {
+       width: 90%;
+  }
+
+  #textinput {
+  	width: 80%;
+  }
+
+  /* thread page */
+  #nameinput {
+  	width: 80%;
+  }
 }
