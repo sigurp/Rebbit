@@ -24,7 +24,19 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res) => {
-  const name = xss(req.body.new_entry_name);
+  const name = xss(req.body.new_entry_name || '');
+  const text = xss(req.body.new_thread_text || '');
+  const title = xss(req.body.new_thread_title || '');
+
+  db.any(`insert into threads (poster, title, text)
+    values ($1, $2, $3)`, [name, title, text])
+    .then((data) => {
+      res.render('index', { title: 'Rebbit þræðir', data });
+    })
+    .catch((error) => {
+      res.render('error', { title: 'Error',
+        message: 'Eitthvað fór úrskeiðis!', error });
+    });
 });
 
 router.get('/threads/:threadID', (req, res, next) => {
