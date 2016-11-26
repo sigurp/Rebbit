@@ -5,6 +5,7 @@ body {
 
 a {
   color: #00B7FF;
+  font: 20px;
 }
 
 header {
@@ -15,9 +16,21 @@ button {
 	height: 60%;
 }
 
+#new_thread_title{
+	font-size: 28px;
+}
+
+.panel-heading {
+	font-size: 28px;
+}
+
 #buttonarea {
 	display: flex;
 	align-items: flex-end;
+}
+
+#new_thread_button i {
+	font-size: 20px;
 }
 
 .site-content {
@@ -56,16 +69,30 @@ button {
 	width: 50%;
 }
 
-#thradasmidur {
+#threadmaker {
 	display:flex;
 	flex-direction: column;
 }
 
-#thradasmidur1 {
+#threadmaker1 {
 	display: flex;
 	justify-content: flex-start;
+	flex-direction: column;
 }
 
-#thradasmidur1 * {
+#threadmaker1 * {
 	padding-right: 2%;
+}
+
+#nameinput {
+	width: 15%;
+}
+
+#titleinput {
+	width: 15%;
+}
+
+#textinput {
+	width: 20%;
+	padding-bottom: 1%;
 }

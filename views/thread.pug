@@ -7,19 +7,22 @@ block content
         h3= poster
       div(class='panel-body')
         p= text
-        div(class='panel panel-default', id='commentsmidur')
+        div(class='panel panel-default', id='commentmaker')
           div(class='panel-heading')
             h3(class='panel-title') Ný Athugasemd
-          div(class='panel-body', id='thradasmidur1')
+          div(class='panel-body', id='commentmaker1')
             div(id='nameinput')
-              label(for='new_comment_name') Nafn
-              input(type='text', class='form-control', id='new_comment_name', name='name', autocomplete='off')
+              form(id='nameinput_form')
+                label(for='new_comment_name') Nafn
+                input(type='text', class='form-control', id='new_comment_name', name='name', autocomplete='off')
             div(id='textinput')
-              label(for='new_comment_text') Athugasemd
-              textarea(autocomplete='off', rows='1', id='new_comment_text', name='text', class='form-control')  
+              form(id='textinput_form')
+                label(for='new_comment_text') Athugasemd
+                textarea(autocomplete='off', rows='1', id='new_comment_text', name='text', class='form-control')  
             div(id='buttonarea')
-              button(class='btn btn-primary')
-                i(class='glyphicon glyphicon-pencil') Skrá athugasemd
+              form(id='buttonarea_form')
+                button(class='btn btn-primary')
+                  i(class='glyphicon glyphicon-pencil') Skrá athugasemd
   
       ul
         for comment in comments
