@@ -48,12 +48,13 @@ router.get('/threads/:threadID', (req, res, next) => {
     .then((thread) => {
       text = thread.text;
       poster = thread.poster;
+      title = thread.title;
       console.log('thread', thread);
       db.any(`select * from comments where thread = $1`,
         [req.params.threadID])
         .then((comments) => {
           console.log('data', comments);
-          res.render('thread', { poster, text, comments });
+          res.render('thread', { poster, text, title, comments });
         })
     })
     .catch((error) => {
