@@ -79,7 +79,7 @@ i {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-bottom: 0%;
+	margin-bottom: 0%;
 }
 
 #footer p {
@@ -89,7 +89,8 @@ i {
 #headerbox {
 	display: flex;
 	justify-content: space-around;
-
+	padding: 2%;
+	margin-bottom: 0%;
 }
 
 #rebbitfrog {
