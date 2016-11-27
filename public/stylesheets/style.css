@@ -27,17 +27,18 @@ i {
 	margin-bottom: 1%;
 }
 
-
+/* index page */
 #new_thread_title{
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .panel-heading {
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .panel-heading h3 {
-	font-size: 28px;
+	font-size: 24px;
+	margin: 0%;
 }
 
 .panel-body {
@@ -83,6 +84,39 @@ i {
   flex: 1;
 }
 
+#threadmaker {
+	display:flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+#threadmaker1 {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+#threadmaker1 * {
+	padding-right: 2%;
+}
+
+#nameinput {
+	width: 20%;
+	max-width: 50%;
+}
+
+#titleinput {
+	width: 50%;
+}
+
+#textinput {
+	width: 70%;
+	max-width: 80%;
+	padding-bottom: 1%;
+}
+
+/* layout page */
+
 #footer {
 	display: flex;
 	flex-direction: column;
@@ -106,32 +140,11 @@ i {
 	width: 50%;
 }
 
-#threadmaker {
-	display:flex;
-	flex-direction: column;
-}
+/* thread page */
 
-#threadmaker1 {
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-}
-
-#threadmaker1 * {
-	padding-right: 2%;
-}
-
-#nameinput {
-	width: 15%;
-}
-
-#titleinput {
-	width: 15%;
-}
-
-#textinput {
-	width: 20%;
-	padding-bottom: 1%;
+.panel-heading h2 {
+	font-size: 30px;
+	margin: 1%;
 }
 
 #new_comment_name {
@@ -151,6 +164,10 @@ i {
   }
 
   /* index page */
+  #threadmaker {
+	width: 100%;
+  }
+
   #name_and_title {
        display: flex;
        flex-direction: column;
@@ -166,6 +183,6 @@ i {
 
   /* thread page */
   #nameinput {
-  	width: 80%;
+  	width: 90%;
   }
 }
