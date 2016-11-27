@@ -1,3 +1,5 @@
+/* Global values */
+
 body {
   padding: 0%;
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -19,6 +21,12 @@ button {
 i {
 	font-size: 18px;
 }
+
+/* Error page */
+#backarea_error {
+	margin-bottom: 1%;
+}
+
 
 #new_thread_title{
 	font-size: 28px;
