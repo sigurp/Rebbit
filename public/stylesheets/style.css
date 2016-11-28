@@ -28,7 +28,7 @@ i {
 }
 
 /* index page */
-#new_thread_title {
+#new_thread_title_1 {
   font-size: 24px;
 }
 
@@ -141,6 +141,10 @@ i {
 }
 
 /* thread page */
+
+#comments_area {
+  width: 90%;
+}
 
 .panel-heading h2 {
   font-size: 30px;
