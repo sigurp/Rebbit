@@ -7,3 +7,6 @@ npm start
 
 Til að villukeyra:
 npm run lint -s
+
+Til keyra stylelint á css
+npm run stylelint -s

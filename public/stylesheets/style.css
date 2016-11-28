@@ -6,68 +6,68 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
   font-size: 28px;
 }
 
 header {
-	padding: 0px;
+  padding: 1px;
 }
 
 button {
-	height: 60%;
+  height: 60%;
 }
 
 i {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 /* Error page */
 #backarea_error {
-	margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
 /* index page */
-#new_thread_title{
-	font-size: 24px;
+#new_thread_title {
+  font-size: 24px;
 }
 
 .panel-heading {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .panel-heading h3 {
-	font-size: 24px;
-	margin: 0%;
+  font-size: 24px;
+  margin: 0%;
 }
 
 .panel-body {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 #name_and_title {
-	display: flex;
+  display: flex;
 }
 
 #new_entry_name {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 #new_thread_text {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 #buttonarea {
-	display: flex;
-	align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 #buttonarea i {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 #new_thread_button i {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .site-content {
@@ -85,104 +85,104 @@ i {
 }
 
 #threadmaker {
-	display:flex;
-	flex-direction: column;
-	width: 40%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
 
 #threadmaker1 {
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 #threadmaker1 * {
-	padding-right: 2%;
+  padding-right: 2%;
 }
 
 #nameinput {
-	width: 20%;
-	max-width: 50%;
+  width: 20%;
+  max-width: 50%;
 }
 
 #titleinput {
-	width: 50%;
+  width: 50%;
 }
 
 #textinput {
-	width: 70%;
-	max-width: 80%;
-	padding-bottom: 1%;
+  width: 70%;
+  max-width: 80%;
+  padding-bottom: 1%;
 }
 
 /* layout page */
 
 #footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0%;
 }
 
 #footer p {
-	width: 50%;
+  width: 50%;
 }
 
 #headerbox {
-	display: flex;
-	justify-content: space-around;
-	padding: 2%;
-	margin-bottom: 0%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  margin-bottom: 0%;
 }
 
 #rebbitfrog {
-	height: 100%;
-	width: 50%;
+  height: 100%;
+  width: 50%;
 }
 
 /* thread page */
 
 .panel-heading h2 {
-	font-size: 30px;
-	margin: 1%;
+  font-size: 30px;
+  margin: 1%;
 }
 
 #new_comment_name {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 #new_comment_text {
-	font-size: 18px;
+  font-size: 18px;
 }
 
-/* mobile dót*/ 
+/* mobile dót */
 
 @media only screen and (max-width: 960px) {
   /* layout page */
   #headerbox {
-      justify-content: center;
+    justify-content: center;
   }
 
   /* index page */
   #threadmaker {
-	width: 100%;
+    width: 100%;
   }
 
   #name_and_title {
-       display: flex;
-       flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   #name_and_title * {
-       width: 90%;
+    width: 90%;
   }
 
   #textinput {
-  	width: 80%;
+    width: 80%;
   }
 
   /* thread page */
   #nameinput {
-  	width: 90%;
+    width: 90%;
   }
 }
