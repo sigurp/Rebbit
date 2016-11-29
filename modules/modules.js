@@ -25,12 +25,6 @@ function getThread(db, req, res) {
     })
 };
 
-function errorHandler(error) {
-  res.render('error', { title: 'Error',
-    message: 'Eitthvað fór úrskeiðis!', error });
-};
-
 module.exports = {
   getThread,
-  errorHandler,
 };
