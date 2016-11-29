@@ -3,7 +3,7 @@ const pgp = require('pg-promise')();
 
 function getThread(db, req, res) {
   let text, poster, title;
-  const thrStrID = '\\threads\\' + req.params.threadID;
+  const thrStrID = '/threads/' + req.params.threadID;
 
   db.one(`select * from threads where id = $1`, [req.params.threadID])
     .then((thread) => {
