@@ -5,11 +5,14 @@ Vinnusvæði fyrir lokaverkefni í vefforritun.
 npm install
 npm start
 
-## Til að villukeyra:
+## Til að villukeyra javascript skrár:
 npm run lint -s
 
-## Til keyra stylelint á css
+## Til að keyra stylelint á css
 npm run stylelint -s
+
+## Til að villuprófa pug
+Ná í pug-lint (https://www.npmjs.com/package/pug-lint) og keyra á .pug skrám.
 
 ## Dump file af gagnagrunn er að finna í db möppunni.
 ## Í local gagnagrunni þarf að búa til nýjan gagnagrunn:
