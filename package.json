@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "stylelint": "stylelint ./public/stylesheets/*.css",
-    "lint": "node ./node_modules/eslint/bin/eslint.js ./routes/*.js"
+    "lint": "node ./node_modules/eslint/bin/eslint.js ./routes/*.js ./modules/*.js"
   },
   "engines": {
     "node": "6.9.1",

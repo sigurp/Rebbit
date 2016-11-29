@@ -21,7 +21,6 @@ router.get('/', (req, res, next) => {
       res.render('error', {
         title: 'Error',
         message: 'Eitthvað fór úrskeiðis!',
-        error,
       });
     });
 });
@@ -43,7 +42,6 @@ router.post('/', (req, res) => {
       res.render('error', {
         title: 'Error',
         message: 'Eitthvað fór úrskeiðis!',
-        error,
       });
     });
 });
