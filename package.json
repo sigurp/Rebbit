@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "stylelint": "stylelint ./public/stylesheets/*.css",
     "lint": "node ./node_modules/eslint/bin/eslint.js ./routes/*.js"
   },
   "engines": {
@@ -29,6 +30,9 @@
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.4.1"
+    "eslint-plugin-react": "^6.4.1",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0",
+    "stylelint-config-vast": "^1.1.4"
   }
 }
